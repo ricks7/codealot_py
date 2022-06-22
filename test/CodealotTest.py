@@ -1,14 +1,19 @@
-from test.BasicCodalot import BasicCodalot
-from test.KnightPosition import KnightPosition
+from codealot.Codealot import Codealot
+from codealot.KnightPosition import KnightPosition
 
-codalot = BasicCodalot()
+numberOfKnights = 6
+codealot = Codealot(numberOfKnights)
 
-codalot.setKnight(0, KnightPosition.TAVERN)
-codalot.setKnight(1, KnightPosition.TAVERN)
-codalot.setKnight(2, KnightPosition.TRAINING_YARD)
-codalot.setKnight(3, KnightPosition.TRAINING_YARD)
-codalot.setKnight(4, KnightPosition.TRAINING_YARD)
-codalot.setKnight(5, KnightPosition.TRAINING_YARD)
-codalot.process()
+positions = [
+    KnightPosition.TAVERN,
+    KnightPosition.TAVERN,
+    KnightPosition.TRAINING_YARD,
+    KnightPosition.TRAINING_YARD,
+    KnightPosition.TRAINING_YARD,
+    KnightPosition.TRAINING_YARD
+]
 
-assert (codalot.calculateEarnedXp() == 4)
+codealot.moveKnights(positions)
+codealot.process()
+
+assert (codealot.calculateEarnedXp() == 4)
