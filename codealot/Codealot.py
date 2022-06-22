@@ -44,7 +44,7 @@ class Codealot:
                 if knight.isBonus():
                     knight.addXp(10)
 
-        if bonusKnights == 6:
+        if bonusKnights == 12:
             for knight in self.knights:
                 if knight.isBonus():
                     knight.addXp(20)

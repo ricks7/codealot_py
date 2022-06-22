@@ -5,7 +5,7 @@ from codealot.KnightPosition import KnightPosition
 
 if __name__ == "__main__":
 
-    numberOfKnights = 6
+    numberOfKnights = 12
     codealot = Codealot(numberOfKnights)
 
     random = Random(1)
